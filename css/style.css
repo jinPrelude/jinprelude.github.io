@@ -108,8 +108,6 @@
   @media (max-width: 600px) {
     .container { padding: 1rem; }
     .profile-image { width: 120px; height: 120px; }
-    .links { flex-direction: column; }
-    .separator { display: none; }
     .project-card {
       flex-direction: column; /* Stack image and content on small screens */
       min-height: auto;
