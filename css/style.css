@@ -1,119 +1,224 @@
 :root {
-    --text-color: #2c3e50;
-    --link-color: #3498db;
-    --background: #ffffff;
-    --border: #eaeaea;
-  }
-  
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  
-  body {
-    font-family: 'Source Sans Pro', system-ui, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background: var(--background);
-  }
-  
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --link-color: #2563eb;
+  --link-hover: #1d4ed8;
+  --background: #ffffff;
+  --border-light: #e5e7eb;
+  --border-medium: #d1d5db;
+  --card-hover: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.profile-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-light);
+  color: var(--text-primary);
+}
+
+h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.title {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+}
+
+.profile p {
+  color: var(--text-secondary);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.venue {
+  font-size: 0.9375rem;
+  color: var(--text-tertiary);
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+
+.links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.375rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.separator {
+  color: var(--border-medium);
+  user-select: none;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+.links a {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.links a:hover {
+  background: var(--card-hover);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.card {
+  margin-bottom: 1rem;
+  padding: 0.75rem 0;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+/* Project Card Styles */
+.project-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1.25rem 0;
+}
+
+.project-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+.project-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content p:last-of-type {
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+/* List Styles */
+.card ul {
+  list-style-position: outside;
+  padding-left: 1.25rem;
+  margin-bottom: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.card li {
+  margin-bottom: 0.375rem;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.card li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
   .container {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2.5rem 1.25rem;
   }
-  
+
+  h1 {
+    font-size: 1.875rem;
+  }
+
+  h2 {
+    font-size: 1.375rem;
+  }
+
   .profile {
-    text-align: center;
     margin-bottom: 3rem;
+    padding-bottom: 2rem;
   }
-  
+
   .profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+    width: 120px;
+    height: 120px;
   }
-  
-  h1, h2, h3 { 
-    font-family: 'Merriweather', serif;
-    font-weight: 400;
-  }
-  h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-  h2 { font-size: 1.6rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
-  h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-  
-  .title, .authors, .venue { color: #666; }
-  .title { margin-bottom: 1.5rem; }
-  .venue { 
-    font-size: 0.9rem; 
-    margin-bottom: 0.5rem;
-  }
-  
-  .links {
-    margin: 2rem 0;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-  
-  a {
-    color: var(--link-color);
-    text-decoration: none;
-  }
-  
-  a:hover {
-    opacity: 0.7;
-    text-decoration: underline;
-  }
-  
-  section { margin-bottom: 3rem; }
-  .card { margin-bottom: 1.5rem; }
-  
-  /* Project Card Styles */
+
   .project-card {
-    display: flex;
-    align-items: stretch;
-    gap: 2rem;
-    min-height: 180px;
-  }
-  
-  .project-image {
-    width: 180px;  /* 4:3 aspect ratio (180px height * 4/3) */
-    height: 210px;
-    object-fit: cover;
-    flex-shrink: 0;
-  }
-  
-  .project-content {
-    flex: 1;
-    display: flex;
     flex-direction: column;
+    gap: 1.25rem;
   }
-  
-  /* List Styles */
-  .card ul {
-    list-style-position: outside;
-    padding-left: 1.2rem;
-    margin-bottom: 0.75rem;
+
+  .project-image {
+    width: 100%;
+    max-height: 220px;
   }
-  
-  .card li {
-    margin-bottom: 0.1rem;
-    color: var(--text-color);
-  }
-  
-  .card li:last-child {
-    margin-bottom: 0;
-  }
-  
-  @media (max-width: 600px) {
-    .container { padding: 1rem; }
-    .profile-image { width: 120px; height: 120px; }
-    .project-card {
-      flex-direction: column; /* Stack image and content on small screens */
-      min-height: auto;
-    }
-    .project-image {
-      width: 100%; /* Full width on small screens */
-      max-height: 200px; /* Limit height on small screens */
-    }
-  }
+
+
+}
