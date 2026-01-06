@@ -94,6 +94,12 @@ h3 {
   font-weight: 400;
 }
 
+.authors {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
 .links {
   margin-top: 2rem;
   display: flex;
