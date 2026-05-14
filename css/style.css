@@ -24,7 +24,7 @@ body {
 .container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 5.5rem 1.5rem 9rem;
+  padding: 5.5rem 1.5rem 4rem;
 }
 
 h1 {
@@ -161,9 +161,28 @@ p {
   margin-bottom: 0;
 }
 
+/* Footer */
+footer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.01em;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+footer a {
+  color: var(--text-secondary);
+}
+
 @media (max-width: 640px) {
   .container {
-    padding: 3.5rem 1.25rem 6rem;
+    padding: 3.5rem 1.25rem 3rem;
   }
 
   h1 {
@@ -172,5 +191,9 @@ p {
 
   h2 {
     margin-top: 3rem;
+  }
+
+  footer {
+    padding: 0 1.25rem 2.5rem;
   }
 }
