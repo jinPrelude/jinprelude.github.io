@@ -1,8 +1,9 @@
 :root {
-  --text-primary: #111110;
-  --text-secondary: #5d5c58;
-  --text-tertiary: #9b9a95;
-  --background: #faf8f5;
+  --text-primary: #1c1b1a;
+  --text-secondary: #44423e;
+  --text-tertiary: #82807a;
+  --background: #f7f5f1;
+  --rule: #1c1b1a;
 }
 
 * {
@@ -12,47 +13,43 @@
 }
 
 body {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 1rem;
-  line-height: 1.75;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9375rem;
+  line-height: 1.6;
   color: var(--text-primary);
   background: var(--background);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 620px;
   margin: 0 auto;
-  padding: 5.5rem 1.5rem 4rem;
+  padding: 4rem 1.5rem 3rem;
 }
 
 h1 {
-  font-family: 'Merriweather', Georgia, serif;
-  font-size: 1.75rem;
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
   margin-bottom: 0.15rem;
 }
 
 h2 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--text-tertiary);
-  margin-top: 4rem;
-  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
 }
 
 h3 {
-  font-family: 'Merriweather', Georgia, serif;
   font-size: 0.9375rem;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  line-height: 1.55;
+  font-weight: 700;
+  line-height: 1.45;
   color: var(--text-primary);
   margin-bottom: 0.3rem;
 }
@@ -60,12 +57,13 @@ h3 {
 a {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: var(--text-tertiary);
-  text-underline-offset: 3px;
-  transition: text-decoration-color 0.1s;
+  text-decoration-color: var(--text-primary);
+  text-underline-offset: 2px;
 }
 
 a:hover {
+  background: var(--text-primary);
+  color: var(--background);
   text-decoration: none;
 }
 
@@ -79,34 +77,34 @@ p {
 }
 
 .title {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   color: var(--text-secondary);
   margin-bottom: 1rem;
 }
 
 .intro {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   color: var(--text-secondary);
-  line-height: 1.8;
+  line-height: 1.7;
   margin-bottom: 0;
 }
 
 /* Nav */
 .nav-links {
   margin-top: 1.25rem;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--text-secondary);
 }
 
 .nav-links .sep {
   color: var(--text-tertiary);
-  margin: 0 0.3rem;
+  margin: 0 0.4rem;
   user-select: none;
 }
 
 /* Entries */
 .entry {
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .entry:last-child {
@@ -114,20 +112,21 @@ p {
 }
 
 .meta {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: var(--text-tertiary);
   margin-bottom: 0.25rem;
-  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .authors {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--text-secondary);
   margin-bottom: 0.25rem;
 }
 
 .entry-body p {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--text-secondary);
   margin-bottom: 0.35rem;
 }
@@ -141,21 +140,21 @@ p {
 .entry-body ul li {
   position: relative;
   padding-left: 1.1rem;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: 1.6;
   margin-bottom: 0.2rem;
 }
 
 .entry-body ul li::before {
-  content: "—";
+  content: "-";
   position: absolute;
   left: 0;
-  color: var(--text-tertiary);
+  color: var(--text-primary);
 }
 
 .entry-body .links-row {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--text-secondary);
   margin-top: 0.4rem;
   margin-bottom: 0;
@@ -163,17 +162,18 @@ p {
 
 /* Footer */
 footer {
-  max-width: 600px;
+  max-width: 620px;
   margin: 0 auto;
-  padding: 0 1.5rem 4rem;
-  text-align: center;
-  font-size: 0.8125rem;
+  padding: 1rem 1.5rem 3rem;
+  font-size: 0.75rem;
   color: var(--text-tertiary);
-  letter-spacing: 0.01em;
 }
 
 footer p {
   margin-bottom: 0;
+  border-top: 1px solid var(--rule);
+  padding-top: 1rem;
+  text-align: center;
 }
 
 footer a {
@@ -182,18 +182,18 @@ footer a {
 
 @media (max-width: 640px) {
   .container {
-    padding: 3.5rem 1.25rem 3rem;
+    padding: 2.5rem 1.25rem 2.5rem;
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
 
   h2 {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
   }
 
   footer {
-    padding: 0 1.25rem 2.5rem;
+    padding: 1rem 1.25rem 2.5rem;
   }
 }
